@@ -36,7 +36,11 @@
   ======================================================== -->
 
 
-  <script type="text/javascript">
+  <script>
+
+
+
+
 
     function selectImage(number){
 
@@ -58,6 +62,26 @@
 
 
       img = 'a'
+      keys = [
+              ['Labrador retriever', 'Beagle', 'English foxhound'],
+              ['Tiger cat', 'Tabby', 'Egyptian cat'],
+              ['Tabby', 'Egyptian cat', 'Tiger cat'],
+              ['Tiger', 'Tiger cat', 'Leonberg'],
+              ['Miniature poodle', 'Toy poodle', 'Standard poodle'],
+              ['Tabby', 'Tiger cat', 'Egyptian cat']
+            ];
+
+      score = [
+                [29,25,14],
+                [53,39,5],
+                [69,14,4],
+                [67,6,1],
+                [61,31,3],
+                [34,24,11]
+              ];
+
+
+
 
       if (number == 1){
         img = 'a'
@@ -98,6 +122,42 @@
       ex4.src = "assets/images/explanation/"+img+"6.png"
       ex5.src = "assets/images/explanation/"+img+"7.png"
       ex6.src = "assets/images/explanation/"+img+"8.png"
+
+
+
+      //
+      // bar1 = document.getElementById("bar1");
+      // bar2 = document.getElementById("bar2");
+      // bar3 = document.getElementById("bar3");
+      // bar4 = document.getElementById("bar4");
+      // bar5 = document.getElementById("bar5");
+      // bar6 = document.getElementById("bar6");
+
+      // $('.div-b').width( '50%' );
+      $('#bar_title1').html( keys[number-1][0]+'<i class="val" id="bar_val1">'+score[number-1][0]+'%</i>' );
+      $('#bar_title2').html( keys[number-1][1]+'<i class="val" id="bar_val2">'+score[number-1][1]+'%</i>' );
+      $('#bar_title3').html( keys[number-1][2]+'<i class="val" id="bar_val3">'+score[number-1][2]+'%</i>' );
+
+
+      // $('#bar_val1').text( score[number-1][0]+'%' );
+      // $('#bar_val2').text( score[number-1][1]+'%' );
+      // $('#bar_val3').text( score[number-1][2]+'%' );
+
+
+      $('#bar1').width( score[number-1][0]+'%' );
+      $('#bar2').width( score[number-1][1]+'%' );
+      $('#bar3').width( score[number-1][2]+'%' );
+
+      // bar1.style['width'] = 50;
+      // alert(bar1.attributes['aria-valuenow']);
+      // bar1.attr = 30;
+
+      // ex1.src = "assets/images/explanation/"+img+"3.png";
+      // ex2.src = "assets/images/explanation/"+img+"4.png";
+      // ex3.src = "assets/images/explanation/"+img+"5.png";
+      // ex4.src = "assets/images/explanation/"+img+"6.png";
+      // ex5.src = "assets/images/explanation/"+img+"7.png";
+      // ex6.src = "assets/images/explanation/"+img+"8.png";
 
 
 
@@ -188,8 +248,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>CAM-Result</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Visual Explanation Map</h2>
+          <p>Visualization and comparison between our proposed method with five state-of-the-art CAM-based methods</p>
         </div>
 
         <div class="portfolio">
@@ -199,8 +259,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(1)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/a1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 1</h4>
+              <!-- <p></p> -->
               <a href="assets/images/inputs/a1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -210,8 +270,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(2)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/b1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 2</h4>
+              <!-- <p>Card</p> -->
               <a href="assets/images/inputs/b1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -220,8 +280,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(3)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/c1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 3</h4>
+              <!-- <p>Card</p> -->
               <a href="assets/images/inputs/c1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -230,8 +290,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(4)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/d1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 4</h4>
+              <!-- <p>Card</p> -->
               <a href="assets/images/inputs/d1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -240,8 +300,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(5)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/e1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 5</h4>
+              <!-- <p>Card</p> -->
               <a href="assets/images/inputs/e1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -250,8 +310,8 @@
           <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(6)">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/f1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Image 6</h4>
+              <!-- <p>Card</p> -->
               <a href="assets/images/inputs/f1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -271,24 +331,25 @@
               <div id = "skills" class="skills">
               <div class="skills-content" id="harry">
 
+
                 <div class="progress" id="p1">
-                  <span class="skill">HTML <i class="val">100%</i></span>
+                  <span class="skill" id="bar_title1">Labrador retriever <i class="val" id="bar_val1">29%</i></span>
                   <div class="progress-bar-wrap" id="pb1">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" id="pbb1"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" id="bar1"></div>
                   </div>
                 </div>
 
                 <div class="progress" id="p2">
-                  <span class="skill">CSS <i class="val">90%</i></span>
+                  <span class="skill" id="bar_title2">Beagle <i class="val" id="bar_val2">25%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="bar2"></div>
                   </div>
                 </div>
 
                 <div class="progress" id="p3">
-                  <span class="skill">JavaScript <i class="val">75%</i></span>
+                  <span class="skill" id="bar_title3">English foxhound <i class="val" id="bar_val3">14%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" id="bar3"></div>
                   </div>
                 </div>
 
@@ -411,7 +472,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row">
@@ -605,6 +666,40 @@
 
   portfolio.hidden = true;
   loading.hidden = true;
+
+
+  number = 0;
+  keys = [
+          ['Labrador retriever', 'Beagle', 'English foxhound'],
+          ['Tiger cat', 'Tabby', 'Egyptian cat'],
+          ['Tabby', 'Egyptian cat', 'Tiger cat'],
+          ['Tiger', 'Tiger cat', 'Leonberg'],
+          ['Miniature poodle', 'Toy poodle', 'Standard poodle'],
+          ['Tabby', 'Tiger cat', 'Egyptian cat']
+        ];
+
+  score = [
+            [29,25,14],
+            [53,39,5],
+            [69,14,4],
+            [67,6,1],
+            [61,31,3],
+            [34,24,11]
+          ];
+
+    $('#bar_title1').html( keys[number-1][0]+'<i class="val" id="bar_val1">'+score[number-1][0]+'%</i>' );
+    $('#bar_title2').html( keys[number-1][1]+'<i class="val" id="bar_val2">'+score[number-1][1]+'%</i>' );
+    $('#bar_title3').html( keys[number-1][2]+'<i class="val" id="bar_val3">'+score[number-1][2]+'%</i>' );
+
+
+    // $('#bar_val1').text( score[number-1][0]+'%' );
+    // $('#bar_val2').text( score[number-1][1]+'%' );
+    // $('#bar_val3').text( score[number-1][2]+'%' );
+
+
+    $('#bar1').width( score[number-1][0]+'%' );
+    $('#bar2').width( score[number-1][1]+'%' );
+    $('#bar3').width( score[number-1][2]+'%' );
 
 
   function runcode(){
