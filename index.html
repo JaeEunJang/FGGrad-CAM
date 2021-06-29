@@ -176,6 +176,13 @@
 
     </script>
 
+    <style>
+    .card-3 {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    </style>
+
+
 
 </head>
 
@@ -245,6 +252,9 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="cam" class="contact">
+
+
+
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -252,11 +262,23 @@
           <p>Visualization and comparison between our proposed method with five state-of-the-art CAM-based methods</p>
         </div>
 
-        <div class="portfolio">
 
-        <div class="row portfolio-container" data-aos="zoom-in">
+<!--
+              <div class="portfolio-details">
+              <div class="col-lg-12">
+                <div class="portfolio-info">
+                  <h3>Select an image</h3>
+                </div>
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(1)">
+
+              </div>
+            </div> -->
+
+        <div class="portfolio card card-3" style="margin:20px">
+
+        <div class="row portfolio-container card-body" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(1)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/a1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 1</h4>
@@ -267,7 +289,7 @@
           </div>
 
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(2)">
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(2)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/b1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 2</h4>
@@ -277,7 +299,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(3)">
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(3)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/c1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 3</h4>
@@ -287,7 +309,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(4)">
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(4)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/d1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 4</h4>
@@ -297,7 +319,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(5)">
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(5)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/e1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 5</h4>
@@ -307,7 +329,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(6)">
+          <div class="col-lg-2 col-md-2 portfolio-item filter-card" onclick = "selectImage(6)" style="width:16%">
             <div class="portfolio-img col-lg-12"><img src="assets/images/inputs/f1.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Image 6</h4>
@@ -322,7 +344,8 @@
       </div>
 
 
-        <div class="row">
+      <div class="card card-3">
+        <div class="row card-body">
 <!-- col-lg-5 d-flex align-items-stretch -->
           <div class="col-lg-4 col-md-5 col-6 align-items-stretch">
             <div>
@@ -461,6 +484,8 @@
 
           </div>
 
+
+        </div>
 
           </div>
     </section><!-- End Contact Section -->
